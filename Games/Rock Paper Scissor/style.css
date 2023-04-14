@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+}
+h1 {
+    background-color: rgb(223, 113, 35);
+}
+
+p{
+    font-size: larger;
+}
+img{
+    padding: 10px;
+    border-radius: 50px;
+}

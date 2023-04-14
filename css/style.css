@@ -4,12 +4,10 @@ body{
 
 h1{
     font-size: 48px;
+    padding-left: 10px ;
     color: pink;
     background-color: #E63754;
     border-radius: 5px;
-    padding: 5px;
-    display: inline;
-    margin-left: 100px;
 }
 
 h2{
@@ -27,8 +25,12 @@ ul{
 }
 
 nav li{
-    float: left;
-    width: 10%;
+    display: inline;
+    text-align: left;
+    padding-right: 10px;
+}
+
+#home{
     text-align: center;
 }
 
@@ -38,10 +40,8 @@ nav{
 }
 
 nav a{
-    display: block;
     text-decoration: none;
     color: pink;
-    border-bottom: 2px solid bisque;
     padding: 8px 0px;
 }
 nav a:hover{
@@ -55,7 +55,7 @@ section a{
     color: pink;
     display: block;
     padding: 10px;
-    text-align: center;
+    text-align: lefttt;
 }
 
 section a:hover{
@@ -70,7 +70,7 @@ div{
 
 
 #gamesLinks{
-    text-align: center;
+    text-align: left;
 }
 #gamesLinks a{
     text-decoration: none;
@@ -85,4 +85,7 @@ div{
 }
 #gamesLinks li{
     padding: 10px;
+}
+#links{
+    text-align: left;
 }
