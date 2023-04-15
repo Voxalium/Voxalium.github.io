@@ -1,7 +1,7 @@
 import * as gfx from "../../Framework/gfx.js";
 import * as obj from "../../Framework/obj.js";
 
-const cv = gfx.createCanvas(600,400);
+const cv = gfx.createCanvas(400,400);
 //-----------------------------------------------------------------
 //------------------------------GLOBAL-----------------------------
 let speed = 7;

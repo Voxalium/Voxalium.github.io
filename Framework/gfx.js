@@ -7,7 +7,7 @@ function createCanvas(w, h){
     document.body.appendChild(canvas);
     document.body.style.textAlign = "center";
 
-    canvas.style.backgroundColor = "grey";
+    canvas.style.backgroundColor = "white";
     canvas.width = w;
     canvas.height = h;
 
