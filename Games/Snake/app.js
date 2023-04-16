@@ -9,18 +9,15 @@ let tileCount= 20;
 let tileSize = 18;
 let isGameOver = false;
 let score = 0;
-let snd = new Audio("sound/blub.wav");
 //-----------------------------------------------------------------
 //------------------------------SNAKE------------------------------
 const snakeParts=[];
-
 class snakePart{
     constructor(x,y){
         this.x = x;
         this.y = y;
     }
 }
-
 let tailLength = 0;
 let snake = {
     x: 10,
@@ -35,7 +32,6 @@ let snake = {
         run: false,
     }
 };
-
 function drawSnake(){
     for(let i = 0; i < snakeParts.length; i++){
         let part=snakeParts[i];
@@ -50,7 +46,6 @@ function drawSnake(){
 
     gfx.drawRect(snakeHead, "#082404", cv.ctx );
 }
-
 function moveSnake(){
     snake.x = snake.x + snake.vx;
     snake.y = snake.y + snake.vy;
@@ -61,7 +56,6 @@ let food = {
     x: 5,
     y: 5
 }
-
 function drawFood(){
     let foodRect = new obj.rectangle(food.x*tileCount, food.y*tileCount, tileSize, tileSize);
     gfx.drawRect(foodRect, "red", cv.ctx);
@@ -105,7 +99,6 @@ function checkCol(){
         score++;
         speed = speed + 0.5;
         tailLength++;
-        snd.play();
     }
 }
 function gameOver(){
