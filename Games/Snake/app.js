@@ -69,20 +69,19 @@ function drawScore(){
 //------------------------------GAMELOOP---------------------------
 function Draw(){
     gfx.clearScreen(cv.ctx, cv.canvas);
-    drawFood();
     drawSnake();
+    drawFood();
     drawScore();
 }
 function Update(){
-    checkCol();
     moveSnake();
+    checkCol(); 
+    gameOver();
 }
 function Game(){
-    Draw();
     Update();
-    gameOver();
+    Draw();
 
-    console.log(snakeParts + " x:" + snake.x + " y:" + snake.y + " px:" + snakePart.x + " py" + snakePart.y );
     if(isGameOver)
     {
         location.reload();
@@ -102,7 +101,7 @@ function checkCol(){
     }
 }
 function gameOver(){
-    if(snake.x < 0 ||snake.x == tileCount  || snake.y < 0 || snake.y == tileCount )
+    if(snake.x < 0   ||snake.x == tileCount   || snake.y < 0 || snake.y == tileCount )
     {
         alert("Game Over\nScore : " + score);
         isGameOver = true;

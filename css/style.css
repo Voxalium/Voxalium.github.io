@@ -1,12 +1,17 @@
 body{
-    background-color: #99152B;
+    background: url("../img/background2.jpg") no-repeat;
+    background-size: cover;
+}
+body img{
+    backdrop-filter: blur(3px);
 }
 
 h1{
     font-size: 48px;
     padding-left: 10px ;
-    color: pink;
-    background-color: #E63754;
+    color: #f82828;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    background-color: #1e36a000;
     border-radius: 5px;
 }
 
@@ -39,7 +44,6 @@ nav{
     width: 100%;
     margin: 0 auto;
     transition: 0.5s;
-    background-color: #E63754;
 }
 
 nav a{
@@ -48,8 +52,8 @@ nav a{
     padding: 0px 0px;
 }
 nav a:hover{
-    color: #99152B;
-    background-color: bisque;
+    color: bisque;
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     transition: background-color 0.2s;
 }
@@ -63,8 +67,8 @@ section a{
 }
 
 section a:hover{
-    color: #99152B;
-    background-color: bisque;
+    color:bisque;
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     transition: 0.2s;
 }
@@ -111,4 +115,9 @@ img{
 }
 .zoom:hover{
     transform: scale(1.2);
+}
+
+#presentation{
+    background-color: #01010155;
+    background-color: blur(2px);
 }
