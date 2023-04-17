@@ -3,7 +3,6 @@ body{
     background-size: cover;
 }
 body img{
-    backdrop-filter: blur(3px);
 }
 
 h1{
@@ -13,6 +12,7 @@ h1{
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
     background-color: #1e36a000;
     border-radius: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h2{
@@ -101,7 +101,7 @@ img{
 #pContainer{
     margin: auto;
     width: 50%;
-
+    backdrop-filter: blur(2px);
 }
 .zoom{
     text-align: center;
@@ -114,10 +114,14 @@ img{
 
 }
 .zoom:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 #presentation{
     background-color: #01010155;
-    background-color: blur(2px);
+    border-radius: 10px;
+}
+
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
