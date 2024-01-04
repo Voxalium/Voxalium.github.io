@@ -6,6 +6,26 @@ body {
     font-family: "Inter";
     font-style: normal;
 }
+h3 {
+    font-size: calc(1.3rem + 0.6vw);
+}
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
 .top-header {
     background-color: white;
     position: sticky;
@@ -20,6 +40,15 @@ body {
 
 .top-header .name {
     font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1320px;
 }
 
 .nav ul {
@@ -66,11 +95,10 @@ body {
     margin: 0 20px;
     z-index: 0;
 }
-.picture.right img {
-    width: 340px;
-    height: 340px;
-}
 
+.picture img {
+    width: 100%;
+}
 #about-me {
     flex: 2;
 }
@@ -78,24 +106,43 @@ body {
     margin-top: 1em;
     margin-bottom: 60px;
     font-size: 30px;
+    font-weight: 500;
+    line-height: 1.2;
 }
 .about-me__introduction {
     font-family: "Spectral";
     font-weight: 800;
     font-style: italic;
-    width: 60%;
     font-size: 16px;
+    line-height: 1.2;
+    width: 60%;
 }
 #about-me p {
     width: 80%;
     font-size: 14px;
+    line-height: 1.5;
 }
 
 .title {
     text-align: center;
     padding-block: 2em;
+    font-weight: 500;
+    font-size: 1.75rem;
 }
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .gallery .nav {
+    justify-content: center;
+}
+.gallery img {
+    width: 300px;
+    height: 300px;
+}
+#gallery .container {
+    display: flex;
     justify-content: center;
 }
 .nav-pills .nav-link.active,
@@ -103,11 +150,9 @@ body {
     color: #000;
     background-color: #beb45a;
     border-radius: 0;
-    cursor: pointer;
 }
 .nav-pills .nav-link {
     color: #000;
-    cursor: pointer;
 }
 .item-column {
     position: relative;
@@ -120,7 +165,7 @@ body {
     padding-bottom: 100%;
 }
 .gallery-item {
-    position: absolute;
+    position: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -148,6 +193,7 @@ body {
     font-family: Spectral;
     font-style: italic;
     font-weight: 300;
+    font-size: 2.5rem;
 }
 .quote__author {
     font-family: Spectral;
@@ -179,7 +225,7 @@ body {
 
 .service {
     background-color: white;
-    max-width: 390px;
+    max-width: 422px;
     width: 30%;
     height: 337px;
     padding: 1em;
@@ -187,6 +233,12 @@ body {
     flex-direction: column;
     justify-content: space-between;
     z-index: 1;
+}
+.service h3 {
+    font-size: 1.75rem;
+}
+.service h4 {
+    font-size: 1.5rem;
 }
 
 #contact {
@@ -264,9 +316,8 @@ input[type="submit"] {
     #about {
         flex-direction: column;
     }
-    .picture img {
-        width: 250px;
-        height: 250px;
+    .picture {
+        width: 80%;
     }
     .picture.left::before {
         width: 100%;
@@ -277,23 +328,15 @@ input[type="submit"] {
         left: 0;
         z-index: -1;
     }
-    .picture.right img {
-        width: 220px;
-        height: 220px;
-    }
-
     .about-me__title {
         text-align: center;
         margin-top: 1em;
-    }
-    .about-me__introduction {
-        width: 100%;
     }
     #services .container {
         flex-direction: column;
     }
     .service {
-        width: 100%;
+        width: 80%;
         max-width: 100%;
         height: auto;
         margin: 2em 0;
@@ -301,7 +344,12 @@ input[type="submit"] {
     .service__description {
         margin-bottom: 1em;
     }
-
+    #services .container {
+        align-items: center;
+    }
+    .container .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
     #services .container::before {
         width: 30%;
         height: 100%;
@@ -350,7 +398,7 @@ input[type="submit"] {
         align-items: center;
     }
     .service {
-        max-width: 90%;
+        max-width: 75%;
     }
     #about,
     #contact {
@@ -360,4 +408,42 @@ input[type="submit"] {
     form {
         width: 100%;
     }
+    .picture {
+        width: 80%;
+    }
+    .container .gallery {
+        grid-template-columns: 1fr;
+    }
+    .gallery img {
+        width: 412px;
+        height: 412px;
+    }
+    .quote figure {
+        padding: 0;
+        margin: 0;
+    }
+    .quote__text {
+        font-size: calc(1.375rem + 1.5vw);
+    }
+}
+.py-3 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+.button {
+    display: inline-block;
+    background-color: white;
+    width: 30px;
+    height: 3px;
+    border-radius: 0;
+    border: none;
+    opacity: 0.5;
+    box-sizing: content-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    padding: 0;
+    background-clip: padding-box;
+}
+.button.active {
+    opacity: 1;
 }
