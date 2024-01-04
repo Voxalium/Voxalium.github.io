@@ -46,6 +46,7 @@
 .carousel-control-prev,
 .carousel-control-next {
     position: absolute;
+    cursor: pointer;
     height: 100%;
     z-index: 1;
     display: flex;

@@ -150,6 +150,22 @@ h1,
     display: flex;
     justify-content: center;
 }
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.filter-button {
+    cursor: pointer;
+    color: black;
+    padding: 10px;
+    list-style: none;
+}
+.active {
+    color: black;
+    background-color: #beb45a;
+}
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
     color: #000;
@@ -175,6 +191,20 @@ h1,
     height: 100%;
     object-fit: cover;
     padding: 0.5em;
+}
+.gallery-item.visible {
+    animation: 0.2s slide;
+}
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transfor: translateX(0%);
+    }
+}
+.gallery-item.hidden {
+    display: none;
 }
 .mg-prev,
 .mg-next {
@@ -446,6 +476,7 @@ input[type="submit"] {
     border-bottom: 10px solid transparent;
     padding: 0;
     background-clip: padding-box;
+    cursor: pointer;
 }
 .button.active {
     opacity: 1;

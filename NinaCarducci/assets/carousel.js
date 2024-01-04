@@ -32,38 +32,41 @@ function drawCarouselIndicators() {
     while (carouselIndicators.hasChildNodes()) {
         carouselIndicators.removeChild(carouselIndicators.firstChild);
     }
-    function createIndicator(i) {
+    for (let i = 0; i < carouselImgArray.length; i++) {
         const indicator = document.createElement("span");
-        indicator.id = `button${i}`;
-
         i == index
             ? (indicator.className = "button active")
             : (indicator.className = "button ");
-        indicator.addEventListener("click", () => {
-            index = i;
-            setIndex();
-            drawCarouselIndicators();
-        });
-        return indicator;
-    }
-    for (let i = 0; i < carouselImgArray.length; i++) {
-        carouselIndicators.appendChild(createIndicator(i));
+
+        indicator.id = `button${i}`;
+        carouselIndicators.appendChild(indicator);
     }
 }
-
 drawCarouselIndicators();
-function setIndex() {
+function setIndex(newIndex) {
+    index = newIndex;
     carouselImg.src = imgUrl + carouselImgArray[index].img;
     carouselImg.alt = imgUrl + carouselImgArray[index].alt;
 }
 
-rightArrow.addEventListener("click", () => {
-    index = handleClick(+1);
-    setIndex();
+function showNextImage() {
+    index = handleClick(1);
+    setIndex(index);
     drawCarouselIndicators();
-});
-leftArrow.addEventListener("click", () => {
+}
+
+function showPreviousImage() {
     index = handleClick(-1);
-    setIndex();
+    setIndex(index);
     drawCarouselIndicators();
+}
+
+rightArrow.addEventListener("click", () => {
+    showNextImage();
 });
+
+leftArrow.addEventListener("click", () => {
+    showPreviousImage();
+});
+
+const carouselInterval = setInterval(showNextImage, 5000);
