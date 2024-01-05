@@ -78,6 +78,7 @@ body {
 .about-me__introduction {
     font-family: "Spectral";
     font-weight: 800;
+    font-size: 16px;
     font-style: italic;
     width: 60%;
 }
@@ -333,6 +334,10 @@ input[type="submit"] {
     .picture.right::before {
         height: 150px;
     }
+    .picture.left img {
+        width: 280px;
+        height: 280px;
+    }
     #services .container {
         align-items: center;
     }
@@ -349,5 +354,8 @@ input[type="submit"] {
     }
     .picture {
         width: 80%;
+    }
+    .about-me__introduction {
+        width: 100%;
     }
 }
