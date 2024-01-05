@@ -104,12 +104,14 @@ body {
     border-radius: 0;
 }
 .nav-pills .nav-link {
+    cursor: pointer;
     color: #000;
 }
 .item-column {
     position: relative;
     margin-bottom: 0 !important;
     padding: 0;
+    cursor: pointer;
 }
 .item-column::after {
     content: "";
@@ -276,6 +278,9 @@ input[type="submit"] {
     .about-me__title {
         text-align: center;
         margin-top: 1em;
+    }
+    .about-me__introduction {
+        width: 100%;
     }
     #services .container {
         flex-direction: column;
