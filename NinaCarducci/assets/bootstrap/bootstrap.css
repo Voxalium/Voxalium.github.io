@@ -6354,7 +6354,6 @@ fieldset:disabled .btn {
 .carousel {
     position: relative;
 }
-
 .carousel.pointer-event {
     touch-action: pan-y;
 }
