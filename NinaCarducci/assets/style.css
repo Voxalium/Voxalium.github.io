@@ -6,26 +6,6 @@ body {
     font-family: "Inter";
     font-style: normal;
 }
-h3 {
-    font-size: calc(1.3rem + 0.6vw);
-}
-h6,
-.h6,
-h5,
-.h5,
-h4,
-.h4,
-h3,
-.h3,
-h2,
-.h2,
-h1,
-.h1 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-}
 .top-header {
     background-color: white;
     position: sticky;
@@ -40,15 +20,6 @@ h1,
 
 .top-header .name {
     font-size: 26px;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-}
-.container {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1320px;
 }
 
 .nav ul {
@@ -95,15 +66,7 @@ h1,
     margin: 0 20px;
     z-index: 0;
 }
-.picture .left {
-    display: flex;
-    justify-content: center;
-}
 
-.picture img {
-    width: 380px;
-    height: 380px;
-}
 #about-me {
     flex: 2;
 }
@@ -111,64 +74,31 @@ h1,
     margin-top: 1em;
     margin-bottom: 60px;
     font-size: 30px;
-    font-weight: 500;
-    line-height: 1.2;
 }
 .about-me__introduction {
     font-family: "Spectral";
     font-weight: 800;
     font-style: italic;
-    font-size: 16px;
-    line-height: 1.2;
     width: 60%;
 }
 #about-me p {
     width: 80%;
     font-size: 14px;
-    line-height: 1.5;
 }
 
+#gallery {
+    /*	min-height: 100vh; */
+}
 .title {
     text-align: center;
     padding-block: 2em;
-    font-weight: 500;
-    font-size: 1.75rem;
 }
-.gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
 .gallery .nav {
     justify-content: center;
 }
-.gallery img {
-    width: 300px;
-    height: 300px;
-}
-#gallery .container {
-    display: flex;
-    justify-content: center;
-}
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-.filter-button {
-    cursor: pointer;
-    color: black;
-    padding: 10px;
-    list-style: none;
-}
-.active {
-    color: black;
-    background-color: #beb45a;
-}
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-    color: #000;
+    color: #fff;
     background-color: #beb45a;
     border-radius: 0;
 }
@@ -186,25 +116,11 @@ h1,
     padding-bottom: 100%;
 }
 .gallery-item {
-    position: block;
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
     padding: 0.5em;
-}
-.gallery-item.visible {
-    animation: 0.2s slide;
-}
-@keyframes slide {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transfor: translateX(0%);
-    }
-}
-.gallery-item.hidden {
-    display: none;
 }
 .mg-prev,
 .mg-next {
@@ -228,7 +144,6 @@ h1,
     font-family: Spectral;
     font-style: italic;
     font-weight: 300;
-    font-size: 2.5rem;
 }
 .quote__author {
     font-family: Spectral;
@@ -260,7 +175,7 @@ h1,
 
 .service {
     background-color: white;
-    max-width: 422px;
+    max-width: 390px;
     width: 30%;
     height: 337px;
     padding: 1em;
@@ -268,12 +183,6 @@ h1,
     flex-direction: column;
     justify-content: space-between;
     z-index: 1;
-}
-.service h3 {
-    font-size: 1.75rem;
-}
-.service h4 {
-    font-size: 1.5rem;
 }
 
 #contact {
@@ -351,9 +260,8 @@ input[type="submit"] {
     #about {
         flex-direction: column;
     }
-    .picture img {
-        width: 280px;
-        height: 280px;
+    .picture {
+        width: 50%;
     }
     .picture.left::before {
         width: 100%;
@@ -372,7 +280,7 @@ input[type="submit"] {
         flex-direction: column;
     }
     .service {
-        width: 80%;
+        width: 100%;
         max-width: 100%;
         height: auto;
         margin: 2em 0;
@@ -380,12 +288,7 @@ input[type="submit"] {
     .service__description {
         margin-bottom: 1em;
     }
-    #services .container {
-        align-items: center;
-    }
-    .container .gallery {
-        grid-template-columns: 1fr 1fr;
-    }
+
     #services .container::before {
         width: 30%;
         height: 100%;
@@ -426,11 +329,15 @@ input[type="submit"] {
         padding-block: 1em;
         text-align: center;
     }
+    .picture.left::before,
+    .picture.right::before {
+        height: 150px;
+    }
     #services .container {
         align-items: center;
     }
     .service {
-        max-width: 75%;
+        max-width: 90%;
     }
     #about,
     #contact {
@@ -440,44 +347,7 @@ input[type="submit"] {
     form {
         width: 100%;
     }
-    #about .picture .left img {
-        width: 240px;
-        height: 240px;
+    .picture {
+        width: 80%;
     }
-    .container .gallery {
-        grid-template-columns: 1fr;
-    }
-    .gallery img {
-        width: 280px;
-        height: 280px;
-    }
-    .quote figure {
-        padding: 0;
-        margin: 0;
-    }
-    .quote__text {
-        font-size: calc(1.375rem + 1.5vw);
-    }
-}
-.py-3 {
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
-}
-.button {
-    display: inline-block;
-    background-color: white;
-    width: 30px;
-    height: 3px;
-    border-radius: 0;
-    border: none;
-    opacity: 0.5;
-    box-sizing: content-box;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    padding: 0;
-    background-clip: padding-box;
-    cursor: pointer;
-}
-.button.active {
-    opacity: 1;
 }

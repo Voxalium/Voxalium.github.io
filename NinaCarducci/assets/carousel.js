@@ -1,9 +1,8 @@
 const carouselImg = document.querySelector(".carousel-img");
 const leftArrow = document.querySelector(".carousel-control-prev");
 const rightArrow = document.querySelector(".carousel-control-next");
-
 const carouselIndicators = document.querySelector(".carousel-indicators");
-
+let carouselInterval;
 const carouselImgArray = [
     {
         img: "ryoji-iwata-wUZjnOv7t0g-unsplash.webp",
@@ -39,6 +38,11 @@ function drawCarouselIndicators() {
             : (indicator.className = "button ");
 
         indicator.id = `button${i}`;
+        indicator.addEventListener("click", () => {
+            setIndex(i);
+            drawCarouselIndicators();
+            resetInterval();
+        });
         carouselIndicators.appendChild(indicator);
     }
 }
@@ -60,6 +64,10 @@ function showPreviousImage() {
     setIndex(index);
     drawCarouselIndicators();
 }
+function resetInterval() {
+    clearInterval(carouselInterval);
+    carouselInterval = setInterval(showNextImage, 5000);
+}
 
 rightArrow.addEventListener("click", () => {
     showNextImage();
@@ -69,4 +77,4 @@ leftArrow.addEventListener("click", () => {
     showPreviousImage();
 });
 
-const carouselInterval = setInterval(showNextImage, 5000);
+carouselInterval = setInterval(showNextImage, 5000);

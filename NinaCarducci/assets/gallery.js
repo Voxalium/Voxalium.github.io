@@ -1,5 +1,7 @@
 const gallery = document.querySelector(".gallery");
 const galleryClass = "gallery-item";
+const modalBack = document.querySelector(".modalBack");
+const modal = document.querySelector('.modal')
 const size = 316;
 const galleryData = [
     {
@@ -53,6 +55,10 @@ const galleryData = [
 galleryData.forEach((data) => {
     const img = createImage(data.img, data.alt, data.tag);
     gallery.appendChild(img);
+
+    img.addEventListener("click", () => {
+        drawModal(img);
+    });
 });
 
 const filterButtons = document.querySelectorAll(".filter-button");
@@ -76,7 +82,7 @@ function createImage(pic, alt, tag) {
     img.alt = alt;
     img.dataset.tag = tag;
     img.classList.add(galleryClass);
-    img.classList.add("filtered");
+    img.classList.add("visible");
     return img;
 }
 
@@ -93,4 +99,11 @@ function filterImages(selectedTag) {
             img.classList.remove("visible");
         }
     });
+}
+
+function drawModal(img) {
+    modalBack.classList.add("visible");
+    modal.classList.add("visible");
+
+    console.log(img);
 }
