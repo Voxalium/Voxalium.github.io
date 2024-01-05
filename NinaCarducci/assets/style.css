@@ -621,3 +621,34 @@ input[type="submit"] {
         width: 100%;
     }
 }
+
+footer {
+    color: white;
+    font-style: "";
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul {
+    padding: 0;
+}
+footer ul li {
+    list-style-type: none;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.h-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer-container {
+    max-width: 800px;
+    width: 100%;
+}
