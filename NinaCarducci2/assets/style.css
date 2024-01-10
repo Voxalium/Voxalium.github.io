@@ -413,6 +413,14 @@ body {
     background-color: #a8d5d8;
     position: relative;
 }
+.services-p {
+    max-width: 70%;
+    font-family: spectral;
+
+    font-style: italic;
+    font-size: 1.5rem;
+    padding-left: 2.5rem;
+}
 #services .container::before {
     content: " ";
     background-color: #1c6474;
