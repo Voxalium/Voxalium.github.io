@@ -591,8 +591,8 @@ input[type="submit"] {
         height: 150px;
     }
     .picture.left img {
-        width: 280px;
-        height: 280px;
+        width: 180px;
+        height: 180px;
     }
     #services .container {
         align-items: center;
