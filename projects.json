@@ -1,0 +1,34 @@
+{
+    "projects": [
+        {
+            "title": "Agence de voyage Booki",
+            "description": "Le projet Booki consistait à intégrer l'interface du site avec du code HTML et CSS en suivant une maquette. Durant ce projet, j'ai appris les rudiments de la programmation web, comme les langages HTML et CSS. J'ai aussi appris à me servir du logiciel Figma qui permet de consulter et créer des maquettes pour les sites web.",
+            "img": "./public/projects/booki1.webp",
+            "skills": ["HTML", "CSS"]
+        },
+
+        {
+            "title": "Site de menus Ohmyfood",
+            "description": "Pour le projet Ohmyfood, j'ai utilisé Sass qui permet d'étendre les fonctionnalités du langage CSS. La particularité de ce projet était le \"mobile first\" et la création de diverses animations comme un loader, des transitions dans l'apparition des menus ou encore des changements de style au survol de la souris. ",
+            "img": "./public/projects/ohmyfood1.webp",
+            "skills": ["HTML", "CSS", "SASS", "Mobile", "Animations"]
+        },
+        {
+            "title": "Site portfolio Sophie Buel",
+            "description": "Pour ce projet, je devais créer le portfolio de Sophie Buel, une architecte d'intérieur. Je devais relier le backend et le frontend en récupérant diverse données depuis la base de données. Le site devait comporter un système de filtrage des photos, la possibilité de se connecter/déconnecter et l'ajout de nouvelles photos grâce à un formulaire.",
+            "img": "./public/projects/sophiebuel1.webp",
+            "skills": ["HTML", "CSS", "Javascript"]
+        },
+        {
+            "title": "Site Menu Maker",
+            "description": "Menu Maker est un site de création de menu pour restaurateur. Mon travail consistait à planifier les développements de ce site en créant différents documents comme la solution technique, les spécificités techniques et une veille technologique.",
+            "img": "./public/projects/menumaker1.webp",
+            "skills": [
+                "Veille technologique",
+                "Gestion",
+                "Plannification",
+                "Documentation technique"
+            ]
+        }
+    ]
+}
